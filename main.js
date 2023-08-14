@@ -25,6 +25,10 @@ app.get('/users', (req, res) => {
   res.render('users', { title: 'List of Users', userNames: userNames });
 });
 
+app.use((req, res) => {
+  res.render('error', { title: 'Error' });
+});
+
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
 });

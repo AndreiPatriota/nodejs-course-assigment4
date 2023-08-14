@@ -1,7 +1,10 @@
-<%- include('head') %>
+<%- include('head') %> 
+<% if(userNames.length !== 0) {%>
 <ul>
   <%for (userName of userNames) {%>
   <li><%= userName %></li>
   <%}%>
 </ul>
-<%- include('foot') %>
+<%} else {%>
+<h2>There are no users added yet!</h2>
+<%}%> <%- include('foot') %>
